@@ -21,7 +21,10 @@ class MainActivity : AppCompatActivity() {
         multiplybtn.setOnClickListener {
             // Created an intent to go to the next activity
             val intent = Intent(this, MainActivity2::class.java)
+            // Added the table number to the intent
+            intent.putExtra("tableNumber", numTxtInput.text.toString())
             startActivity(intent)
+
         }
 
 
