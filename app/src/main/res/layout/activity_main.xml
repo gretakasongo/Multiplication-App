@@ -45,8 +45,16 @@
         android:id="@+id/multiplyBtn"
         android:layout_width="194dp"
         android:layout_height="85dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="595dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="51dp"
+        android:background="#983F3F3F"
+        android:backgroundTint="#100F10"
         android:text="Multiply!"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="595dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
