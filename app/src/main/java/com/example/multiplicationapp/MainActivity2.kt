@@ -19,9 +19,23 @@ class MainActivity2 : AppCompatActivity() {
         // converting the table number to an integer
         val tableNumber = tableString!!.toInt()
         val Table = findViewById<TextView>(R.id.Table)
-        val timesDisplay: String ="$tableNumber x table\n\n"
+        var timesDisplay: String ="$tableNumber x table\n\n"
+        // creating counter for while loop
+        var count = 1
         // setting the text of the table to the table number
         Table.text = timesDisplay
+        // while loop to display the table
+        while (count <=10){
+            //example: user enters 5 and count is 1 SO: 5 x 1 = 5 (answer)
+            val answer = tableNumber * count
+            /*display as:
+            5 x 1 = 5
+            5 x 2 = 10
+            5 x 3 = 15
+            5 x 4 = 20
+             */
+            timesDisplay += "$tableNumber x $count = $answer\n"
+        }
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
