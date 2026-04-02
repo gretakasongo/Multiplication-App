@@ -26,6 +26,12 @@ class MainActivity2 : AppCompatActivity() {
         Table.text = timesDisplay
         // while loop to display the table
         while (count <=10){
+            // skip 3
+            if (count == 3){
+                count++
+                continue
+            }
+            // skip 6)
             //example: user enters 5 and count is 1 SO: 5 x 1 = 5 (answer)
             val answer = tableNumber * count
             /*display as:
@@ -35,6 +41,8 @@ class MainActivity2 : AppCompatActivity() {
             5 x 4 = 20
              */
             timesDisplay += "$tableNumber x $count = $answer\n"
+            // increasing the count
+            count++
         }
 
 
