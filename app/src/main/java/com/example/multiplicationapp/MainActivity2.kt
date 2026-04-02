@@ -17,8 +17,12 @@ class MainActivity2 : AppCompatActivity() {
         // getting the table number from the intent
         val tableString: String? = bundle?.getString("tableNumber")
         // converting the table number to an integer
-        val tableNumber = tableString?.toInt()
+        val tableNumber = tableString!!.toInt()
         val Table = findViewById<TextView>(R.id.Table)
+        val timesDisplay: String ="$tableNumber x table\n\n"
+        // setting the text of the table to the table number
+        Table.text = timesDisplay
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
